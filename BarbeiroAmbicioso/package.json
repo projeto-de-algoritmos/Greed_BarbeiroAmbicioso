@@ -1,0 +1,9 @@
+{
+  "name": "barbeiro-ambicioso",
+  "version": "0.0.0",
+  "description": "BarbeiroAmbicioso",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
