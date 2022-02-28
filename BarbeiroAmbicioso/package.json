@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "description": "BarbeiroAmbicioso",
   "main": "app.js",
-  "author": {
-    "name": ""
+  "author": "Bianca Sofia e Daniel",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }
