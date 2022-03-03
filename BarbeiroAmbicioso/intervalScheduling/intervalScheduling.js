@@ -1,18 +1,18 @@
 
 module.exports = class IntervalScheduling {
     constructor() {
-      
+
     }
-   
-    
+
+
     calculaScheduling(qtd, horarios) {
-      
-       var max = [];
+
+        var max = [];
         var anterior = 0
-    
+
         for (var i = 0; i < qtd; i++) {
             if (horarios[i].inicio >= anterior) {
-                max.push(i)
+                max.push(horarios[i])
                 anterior = horarios[i].fim
             }
         }
