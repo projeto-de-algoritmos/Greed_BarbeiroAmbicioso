@@ -8,23 +8,28 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/img', express.static(__dirname + 'public/img'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.set('view engine', 'pug')
+
+let result
+let horarios = [];
 
 app.get('', function (req, resposta) {
     resposta.sendFile(__dirname + "/public/index.html");
 
 });
-app.set('view engine', 'pug')
-let result
-let horarios = [];
+
 app.post("/addTime", function (req, res) {
-    result = {
-        inicio: parseInt(req.body.startTime),
-        fim: parseInt(req.body.endTime),
+    if (req.body.startTime !== null && req.body.endTime !== null) {
+        result = {
+            inicio: parseInt(req.body.startTime.replace(':', '')),
+            fim: parseInt(req.body.endTime.replace(':', '')),
+        }
+        horarios.push(result)
+        console.log(horarios)
+        res.sendFile(__dirname + "/public/index.html");
     }
-    horarios.push(result)
-    console.log(horarios)
-    res.sendFile(__dirname + "/public/index.html");
 });
+
 app.post("/checkDisponibility", function (req, res) {
     horarios.sort(function (a, b) {
         if (a.fim < b.fim) return -1;
