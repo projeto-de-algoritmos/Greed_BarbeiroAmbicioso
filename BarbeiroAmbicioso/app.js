@@ -14,43 +14,25 @@ app.get('', function (req, resposta) {
 
 });
 app.set('view engine', 'pug')
-//teste  ordena horarios
-
-var horarios = [{
-    inicio: 1,
-    fim: 3
-},
-{
-    inicio: 2,
-    fim: 4
-},
-{
-    inicio: 0,
-    fim: 2
-}, {
-    inicio: 5,
-    fim: 6
-},
-{
-    inicio: 7,
-    fim: 8
-},
-{
-    inicio: 6,
-    fim: 10
-}];
-horarios.sort(function (a, b) {
-    if (a.fim < b.fim) return -1;
-    if (a.fim > b.fim) return 1;
-    return 0;
+let result
+let horarios = [];
+app.post("/addTime", function (req, res) {
+    result = {
+        inicio: parseInt(req.body.startTime),
+        fim: parseInt(req.body.endTime),
+    }
+    horarios.push(result)
+    console.log(horarios)
+    res.sendFile(__dirname + "/public/index.html");
 });
-console.log(horarios);
-//fim teste
-var interval = new intervalScheduling()
-console.log(interval.calculaScheduling(horarios.length, horarios))
-horariosScheduling = interval.calculaScheduling(horarios.length, horarios)
-console.log(horariosScheduling[0].inicio)
 app.post("/checkDisponibility", function (req, res) {
+    horarios.sort(function (a, b) {
+        if (a.fim < b.fim) return -1;
+        if (a.fim > b.fim) return 1;
+        return 0;
+    });
+    var interval = new intervalScheduling()
+    horariosScheduling = interval.calculaScheduling(horarios.length, horarios)
     res.render('../views/test', {
 
         teste: horariosScheduling
