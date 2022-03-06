@@ -21,9 +21,9 @@ Para isso usamos o Interval Scheduling para resolvermos essa questão de forma �
 
 ## Screenshots
 Screenshots do projeto
-	![Página 1](BarbeiroAmbicioso/Prints/pagina1.png)
-	![Página 2](BarbeiroAmbicioso/Prints/pagina2.png)
-	![Página 3](BarbeiroAmbicioso/Prints/pagina3.png)
+	![Página 1](Prints/pagina1.png)
+	![Página 2](Prints/pagina2.png)
+	![Página 3](Prints/pagina3.png)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
