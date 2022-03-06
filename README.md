@@ -31,7 +31,7 @@ Para rodar o projeto localmente, é necessário possuir o node instalado na máq
 
 Clone o repositório em sua máquina local e baixe as dependências com o comando npm install.
 
-Para executar o projeto: node index.js. O projeto roda na porta: localhost:3000
+Para executar o projeto: node app.js. O projeto roda na porta: localhost:3000
 
 ## Uso 
 Após executar o comando para rodar e abrir o localhost:3000, o usuário deve escolher os horários que deseja encaixar em sua agenda, com início e fim e em seguida apertar em ver os horários.
