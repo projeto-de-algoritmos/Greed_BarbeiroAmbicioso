@@ -16,7 +16,7 @@ Temas:
 | 19/0026375  | Daniel Vinicius Ribeiro Alves |
 
 ## Sobre 
-Barbeiro Ambicioso tem como objetivo ajudar barbeiros a organizarem seus horários em sua barbearia de forma eficiênte e ambiciosa, com a finalidade de conseguir atender o máximo possível de clientes, já que é uma barbearia muito requisitada.
+Barbeiro Ambicioso tem como objetivo ajudar barbeiros a organizarem seus horários em sua barbearia de forma eficiente e ambiciosa, com a finalidade de conseguir atender o máximo possível de clientes, já que é uma barbearia muito requisitada.
 Para isso usamos o Interval Scheduling para resolvermos essa questão de forma ótima.
 
 ## Screenshots
